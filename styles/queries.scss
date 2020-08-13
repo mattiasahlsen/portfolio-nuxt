@@ -1,0 +1,45 @@
+@media (max-width: $sm) {
+  .hero-text {
+    font-size: 1.5em;
+  }
+}
+@media (min-width: $sm) {
+  .hero-text {
+    font-size: 2em;
+  }
+  .container {
+    width: 100%;
+  }
+}
+@media (min-width: $md) {
+  .hero-text {
+    font-size: 3em;
+  }
+  .container {
+    width: 95%;
+  }
+  .project {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+}
+@media (min-width: $lg) {
+  .hero-text {
+    font-size: 4em;
+  }
+  .container {
+    width: 90%;
+  }
+  .project {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+}
+@media (min-width: $xl) {
+  .hero-text {
+    font-size: 5em;
+  }
+  .container {
+    width: 80%;
+  }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" {{ HTML_ATTRS }}>
+  <head {{ HEAD_ATTRS }}>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700&display=swap" rel="stylesheet"> 
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-93222190-4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-93222190-4');
+    </script>
+
+    {{ HEAD }}
+
+  </head>
+  <body {{ BODY_ATTRS }}>
+    <noscript>
+      <strong>We're sorry but this website doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+
+    {{ APP }}
+  </body>
+</html>
