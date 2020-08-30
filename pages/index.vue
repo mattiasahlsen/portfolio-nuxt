@@ -23,6 +23,46 @@
         <div class="content">
           <Project
             class="project"
+            background-image="spotifyfavourites.png"
+            link="https://spotifyfavourites.com/"
+            github="https://github.com/mattiasahlsen/spotify-app"
+            description="A website for easily seeing your favourite songs and artists on Spotify. Used the Spotify web API."
+            title="Spotify Favourites"
+          />
+          <Project
+            class="project"
+            background-image="spotifyqueue.png"
+            link="https://spotifyqueue.com/"
+            github="https://github.com/mattiasahlsen/spotify-queue"
+            description="A web application to make shared queues for Spotify. Everybody with the link can add songs. Only the host of the queue needs a Spotify account."
+            title="Shared Queues on Spotify"
+          />
+        </div>
+
+        <div class="content">
+          <Project
+            class="project"
+            background-image="vue-navbar.png"
+            video="vue-navbar.mp4"
+            link="https://mattiasahlsen.github.io/vue-navbar"
+            github="https://github.com/mattiasahlsen/vue-navbar"
+            description="A reusable navigation bar component for Vue projects."
+            title="Vue Navbar"
+          />
+          <Project
+            class="project"
+            background-image="overlay-image.png"
+            video="overlay-image.mp4"
+            link="https://mattiasahlsen.github.io/overlay-image"
+            github="https://github.com/mattiasahlsen/overlay-image"
+            description="A reusable image component for Vue projects."
+            title="Overlay Image"
+          />
+        </div>
+
+        <div class="content">
+          <Project
+            class="project"
             background-image="chessgame.png"
             video="chessgame.mp4"
             link="https://mattiasahlsen.github.io/jackfish/#/"
@@ -38,24 +78,6 @@
             github="https://github.com/mattiasahlsen/comments"
             description="A website for hosting comment fields for any news articles."
             title="News Website"
-          />
-        </div>
-        <div class="content">
-          <Project
-            class="project"
-            background-image="spotifyfavourites.png"
-            link="https://spotifyfavourites.com/"
-            github="https://github.com/mattiasahlsen/spotify-app"
-            description="A website for easily seeing your favourite songs and artists on Spotify. Used the Spotify web API."
-            title="Spotify Favourites"
-          />
-          <Project
-            class="project"
-            background-image="spotifyqueue.png"
-            link="https://spotifyqueue.com/"
-            github="https://github.com/mattiasahlsen/spotify-queue"
-            description="A web application to make shared queues for Spotify. Everybody with the link can add songs. Only the host of the queue needs a Spotify account."
-            title="Shared Queues on Spotify"
           />
         </div>
       </main>
@@ -119,6 +141,7 @@ export default {
 }
 .me {
   width: 100%;
+  border-radius: 5px;
 }
 
 .top-bar {
