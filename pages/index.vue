@@ -24,9 +24,9 @@
           <Project
             class="project"
             background-image="stepin.png"
-            video="stepin.mp4"
+            video="stepin-2.mp4"
             link="https://stepincert.com/"
-            description="An education for companies and newly-arrived academics in Sweden to help utilize unused competence on the Swedish job market. Not yet launched."
+            description="An education for companies and newly-arrived academics in Sweden to help utilize unused competence on the Swedish job market. A part of Engineers Without Borders. Not yet launched."
             title="StepIn Education"
           />
           <Project
@@ -90,6 +90,7 @@
             description="A website for hosting comment fields for any news articles."
             title="News Website"
           />
+          <div></div>
         </div>
       </main>
     </div>

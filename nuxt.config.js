@@ -61,6 +61,11 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
+    filenames: {
+      app: ({ isDev }) => isDev ? '[name].[hash].js' : '[chunkhash].js',
+      chunk: ({ isDev }) => isDev ? '[name].[hash].js' : '[chunkhash].js',
+      video: ({ isDev }) => isDev ? '[path][name].[ext]' : 'videos/[contenthash:7].[ext]'
+    },
   },
 
   generate: {
