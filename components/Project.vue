@@ -34,8 +34,11 @@
       </div>
     </div>
 
-    <div v-if="github" class="project-links">
-      <a target="_blank" :href="github">
+    <div class="project-links">
+      <a v-if="github" target="_blank" :href="github">
+        {{ title }}
+      </a>
+      <a v-else target="_blank" :href="link">
         {{ title }}
       </a>
       <p v-if="description">
@@ -155,5 +158,9 @@ export default {
   margin: 2em;
   border-bottom-right-radius: 0.2em;
   border-bottom-left-radius: 0.2em;
+}
+
+.title {
+  color: $dark-2;
 }
 </style>

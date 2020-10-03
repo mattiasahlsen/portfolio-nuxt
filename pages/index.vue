@@ -23,11 +23,11 @@
         <div class="content">
           <Project
             class="project"
-            background-image="spotifyfavourites.png"
-            link="https://spotifyfavourites.com/"
-            github="https://github.com/mattiasahlsen/spotify-app"
-            description="A website for easily seeing your favourite songs and artists on Spotify. Used the Spotify web API."
-            title="Spotify Favourites"
+            background-image="stepin.png"
+            video="stepin.mp4"
+            link="https://stepincert.com/"
+            description="An education for companies and newly-arrived academics in Sweden to help utilize unused competence on the Swedish job market. Not yet launched."
+            title="StepIn Education"
           />
           <Project
             class="project"
@@ -42,6 +42,14 @@
         <div class="content">
           <Project
             class="project"
+            background-image="spotifyfavourites.png"
+            link="https://spotifyfavourites.com/"
+            github="https://github.com/mattiasahlsen/spotify-app"
+            description="A website for easily seeing your favourite songs and artists on Spotify. Used the Spotify web API."
+            title="Spotify Favourites"
+          />
+          <Project
+            class="project"
             background-image="vue-navbar.png"
             video="vue-navbar.mp4"
             link="https://mattiasahlsen.github.io/vue-navbar"
@@ -49,6 +57,9 @@
             description="A reusable navigation bar component for Vue projects."
             title="Vue Navbar"
           />
+        </div>
+
+        <div class="content">
           <Project
             class="project"
             background-image="overlay-image.png"
@@ -58,9 +69,6 @@
             description="A reusable image component for Vue projects."
             title="Overlay Image"
           />
-        </div>
-
-        <div class="content">
           <Project
             class="project"
             background-image="chessgame.png"
@@ -70,6 +78,9 @@
             description="A chess computer made in javascript."
             title="Chess Computer"
           />
+        </div>
+
+        <div class="content">
           <Project
             class="project"
             video="urlexp.mp4"
