@@ -21,14 +21,23 @@
     <div class="background">
       <main class="container">
         <div class="content">
-          <Project
+          <!--<Project
             class="project"
             background-image="stepin.png"
             video="stepin-2.mp4"
             link="https://stepincert.com/"
             description="An education for companies and newly-arrived academics in Sweden to help utilize unused competence on the Swedish job market. A part of Engineers Without Borders. Not yet launched."
             title="StepIn Education"
+          />-->
+          <Project
+            class="project"
+            background-image="salary-calculator.png"
+            link="https://mattiasahlsen.github.io/salary-calculator/"
+            github="https://github.com/mattiasahlsen/salary-calculator"
+            description="A web application estimating your salary using linear regression. Uses Tensorflow for Javascript."
+            title="Salary Calculator"
           />
+
           <Project
             class="project"
             background-image="spotifyqueue.png"
