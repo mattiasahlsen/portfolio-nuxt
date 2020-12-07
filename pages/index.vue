@@ -41,7 +41,7 @@
           <Project
             class="project"
             background-image="spotifyqueue.png"
-            link="https://spotifyqueue.com/"
+            link="https://collabqueue.com/"
             github="https://github.com/mattiasahlsen/spotify-queue"
             description="A web application to make shared queues for Spotify. Everybody with the link can add songs. Only the host of the queue needs a Spotify account."
             title="Shared Queues on Spotify"
