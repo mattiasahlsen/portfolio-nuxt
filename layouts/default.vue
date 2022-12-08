@@ -7,15 +7,20 @@
           <div class="about">
             <h2>About</h2>
             <p>
-              Mattias Ahlsén is a 22-year old engineering student currently doing his
-              master's degree at Uppsala University, Sweden.
+              Mattias Ahlsén is a 25-year old Frontend Engineer passionate about
+              everything typescript.
             </p>
           </div>
         </div>
         <div class="credits footer-section">
           <p>Created by Mattias Ahlsén.</p>
           <p>Background photo by Clément H on Unsplash.</p>
-          <p>Powered by <a target="_blank" class="light-link" href="https://vuejs.org/">Vue.js</a>.</p>
+          <p>
+            Powered by
+            <a target="_blank" class="light-link" href="https://vuejs.org/"
+              >Vue.js</a
+            >.
+          </p>
         </div>
         <div class="links footer-section">
           <h2>Contact</h2>
@@ -41,21 +46,20 @@
 </template>
 
 <script>
-
 export default {
-  name: 'App',
-  components: {
-  },
+  name: "App",
+  components: {},
   methods: {
     openMail() {
-      window.location.href = 'mailto:mattias.ahlsen@gmail.com?subject=Subject&body=Message%20goes%20here'
+      window.location.href =
+        "mailto:mattias.ahlsen@gmail.com?subject=Subject&body=Message%20goes%20here";
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
-@import '../styles/imports.scss';
+@import "../styles/imports.scss";
 
 #app {
   min-height: 100vh;
@@ -67,7 +71,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
 
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .footer {
