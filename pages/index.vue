@@ -2,7 +2,7 @@
   <div>
     <div class="top-bar">
       <div class="me-container">
-        <img src="../assets/me.jpg" class="me">
+        <img src="../assets/me.png" class="me" />
       </div>
       <div class="center-flex">
         <h1 class="title hero-text">
@@ -41,7 +41,7 @@
           <Project
             class="project"
             background-image="spotifyqueue.png"
-            link="https://collabqueue.com/"
+            link="https://github.com/mattiasahlsen/spotify-queue"
             github="https://github.com/mattiasahlsen/spotify-queue"
             description="A web application to make shared queues for Spotify. Everybody with the link can add songs. Only the host of the queue needs a Spotify account."
             title="Shared Queues on Spotify"
@@ -52,7 +52,7 @@
           <Project
             class="project"
             background-image="spotifyfavourites.png"
-            link="https://spotifyfavourites.com/"
+            link="https://github.com/mattiasahlsen/spotify-app"
             github="https://github.com/mattiasahlsen/spotify-app"
             description="A website for easily seeing your favourite songs and artists on Spotify. Used the Spotify web API."
             title="Spotify Favourites"
@@ -94,7 +94,7 @@
             class="project"
             video="urlexp.mp4"
             background-image="urlexp.png"
-            link="https://urlexp.com/"
+            link="https://github.com/mattiasahlsen/comments"
             github="https://github.com/mattiasahlsen/comments"
             description="A website for hosting comment fields for any news articles."
             title="News Website"
@@ -107,7 +107,7 @@
 </template>
 
 <script>
-import Project from '../components/Project'
+import Project from "../components/Project";
 
 export default {
   components: {
@@ -115,32 +115,32 @@ export default {
   },
   data() {
     return {
-      titleText1: '',
-      titleText2: '',
+      titleText1: "",
+      titleText2: "",
       titleCursor: false,
-    }
+    };
   },
   mounted() {
-    this.titleCursor = true
+    this.titleCursor = true;
     setTimeout(() => {
-      const titleText1 = ''
-      const titleText2 = ' Portfolio'
+      const titleText1 = "";
+      const titleText2 = " Portfolio";
 
       const titleInterval = setInterval(() => {
         if (this.titleText1.length === titleText1.length) {
           if (this.titleText2.length === titleText2.length) {
-            clearInterval(titleInterval)
-            this.titleCursor = false
+            clearInterval(titleInterval);
+            this.titleCursor = false;
           } else {
-            this.titleText2 += titleText2.charAt(this.titleText2.length)
+            this.titleText2 += titleText2.charAt(this.titleText2.length);
           }
         } else {
-          this.titleText1 += titleText1.charAt(this.titleText1.length)
+          this.titleText1 += titleText1.charAt(this.titleText1.length);
         }
-      }, 100)
-    }, 2000)
-  }
-}
+      }, 100);
+    }, 2000);
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -166,8 +166,8 @@ export default {
 }
 
 .top-bar {
-  display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
   display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
   display: -webkit-flexbox;
   display: flex;
@@ -183,11 +183,8 @@ export default {
   justify-content: space-around;
 }
 .background {
-  background: linear-gradient(
-    rgba(255, 255, 255, 0.6),
-    rgba(0, 0, 0, 0.8)
-    ),
-    url('../assets/background.jpg');
+  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0.8)),
+    url("../assets/background.jpg");
   background-position: center;
   background-size: cover;
   padding: 5em 0;
@@ -211,7 +208,7 @@ export default {
 // blinking cursor
 .blinking-cursor {
   font-weight: bold;
-  color: #2E3D48;
+  color: #2e3d48;
   -webkit-animation: 1s blink step-end infinite;
   -moz-animation: 1s blink step-end infinite;
   -ms-animation: 1s blink step-end infinite;
@@ -220,7 +217,8 @@ export default {
 }
 
 @keyframes blink {
-  from, to {
+  from,
+  to {
     color: transparent;
   }
   50% {
