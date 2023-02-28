@@ -21,6 +21,17 @@
     <div class="background">
       <main class="container">
         <div class="content">
+          <Project
+            class="project"
+            background-image="badwriter.png"
+            link="https://badwriter.io"
+            github="https://badwriter.io"
+            description="A web application giving feedback on your CV. Uses OpenAI API."
+            title="Badwriter.io"
+            video="badwriter-demo.mp4"
+          />
+        </div>
+        <div class="content">
           <!--<Project
             class="project"
             background-image="stepin.png"
@@ -99,7 +110,6 @@
             description="A website for hosting comment fields for any news articles."
             title="News Website"
           />
-          <div></div>
         </div>
       </main>
     </div>
@@ -111,13 +121,13 @@ import Project from "../components/Project";
 
 export default {
   components: {
-    Project,
+    Project
   },
   data() {
     return {
       titleText1: "",
       titleText2: "",
-      titleCursor: false,
+      titleCursor: false
     };
   },
   mounted() {
@@ -139,7 +149,7 @@ export default {
         }
       }, 100);
     }, 2000);
-  },
+  }
 };
 </script>
 

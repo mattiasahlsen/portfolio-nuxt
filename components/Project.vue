@@ -15,6 +15,7 @@
                 class="project-video"
                 :poster="require('../assets/' + backgroundImage)"
                 loop
+                muted
               >
                 <source :src="require('../assets/' + video)" type="video/mp4">
               </video>
