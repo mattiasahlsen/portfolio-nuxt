@@ -2,17 +2,19 @@
   <div id="app">
     <nuxt />
     <footer class="footer">
-      <div class="container footer-content">
-        <div class="footer-section">
-          <div class="about">
-            <h2>About</h2>
-            <p>
-              Mattias Ahlsén is a 25-year old Frontend Engineer passionate about
-              everything typescript.
-            </p>
-          </div>
+      <div
+        class="container flex justify-between items-start text-left text-white py-4 lg:py-6 gap-6"
+      >
+        <div class="flex-1">
+          <h2>About</h2>
+          <p>
+            Mattias Ahlsén is a 25-year old frontend-engineer passionate about
+            everything typescript.
+          </p>
         </div>
-        <div class="credits footer-section">
+
+        <div class="flex-1">
+          <h2>Credits</h2>
           <p>Created by Mattias Ahlsén.</p>
           <p>Background photo by Clément H on Unsplash.</p>
           <p>
@@ -22,22 +24,28 @@
             >.
           </p>
         </div>
-        <div class="links footer-section">
-          <h2>Contact</h2>
-          <div class="icon github">
-            <a target="_blank" href="https://github.com/mattiasahlsen">
-              <font-awesome-icon size="2x" :icon="['fab', 'github']" />
-            </a>
-          </div>
-          <div class="icon linkedin">
-            <a target="_blank" href="https://www.linkedin.com/in/mattiasahlsen">
-              <font-awesome-icon size="2x" :icon="['fab', 'linkedin']" />
-            </a>
-          </div>
-          <div class="icon mail">
-            <a @click.prevent="openMail">
-              <font-awesome-icon size="2x" icon="envelope" />
-            </a>
+
+        <div class="flex-1 flex justify-end">
+          <div>
+            <h2>Contact</h2>
+            <div class="icon github">
+              <a target="_blank" href="https://github.com/mattiasahlsen">
+                <font-awesome-icon size="2x" :icon="['fab', 'github']" />
+              </a>
+            </div>
+            <div class="icon linkedin">
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/mattiasahlsen"
+              >
+                <font-awesome-icon size="2x" :icon="['fab', 'linkedin']" />
+              </a>
+            </div>
+            <div class="icon mail">
+              <a @click.prevent="openMail">
+                <font-awesome-icon size="2x" icon="envelope" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -97,9 +105,6 @@ export default {
 .footer-section {
   flex: 1 1 0;
 }
-.credits {
-  margin-top: 4em;
-}
 .credits p {
   margin-bottom: 0.2em;
 }
@@ -117,6 +122,9 @@ export default {
     cursor: pointer;
     color: $link-color;
   }
+}
+.icon.github {
+  transform: translateX(-2px);
 }
 .linkedin {
   color: $blue-2;

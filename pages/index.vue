@@ -1,24 +1,21 @@
 <template>
   <div>
-    <div class="top-bar">
-      <div class="me-container">
+    <div class="top-bar p-2 md:p-4">
+      <div class="w-20 md:w-32 lg:w-40">
         <img src="../assets/me.png" class="me" />
       </div>
       <div class="center-flex">
-        <h1 class="title hero-text">
+        <h1 class="title font-bold text-3xl md:text-5xl lg:text-6xl m-2">
           <span>
-            <span class="name">Mattias Ahlsén</span>
-            {{ titleText1 }}
-          </span>
-          <span>
-            {{ titleText2 }}
-          </span>
-          <span v-if="titleCursor" class="blinking-cursor">|</span>
+            <span class="name whitespace-no-wrap">Mattias Ahlsén</span
+            ><span>{{ titleText1 }}</span></span
+          ><span>{{ titleText2 }}</span
+          ><span v-if="titleCursor" class="blinking-cursor">|</span>
         </h1>
       </div>
     </div>
 
-    <div class="background">
+    <div class="background py-2 md:py-6 lg:py-12">
       <main class="container">
         <div class="content">
           <Project
@@ -134,14 +131,14 @@ export default {
   mounted() {
     this.titleCursor = true;
     setTimeout(() => {
-      const titleText1 = "";
+      const titleText1 = "'s";
       const titleText2 = " Portfolio";
 
+      this.titleCursor = false;
       const titleInterval = setInterval(() => {
         if (this.titleText1.length === titleText1.length) {
           if (this.titleText2.length === titleText2.length) {
             clearInterval(titleInterval);
-            this.titleCursor = false;
           } else {
             this.titleText2 += titleText2.charAt(this.titleText2.length);
           }
@@ -165,7 +162,6 @@ export default {
 }
 .title {
   color: $light-2;
-  margin: 2rem;
 }
 .me-container {
   -webkit-flex: 0 1 200px;
@@ -185,7 +181,6 @@ export default {
   justify-content: flex-start;
   align-items: center;
 
-  padding: 1em;
   background-color: $secondary;
 }
 
@@ -194,11 +189,10 @@ export default {
   justify-content: space-around;
 }
 .background {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)),
     url("../assets/background.jpg");
   background-position: center;
   background-size: cover;
-  padding: 5em 0;
 }
 .project {
   flex: 1 0 0;
