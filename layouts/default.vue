@@ -3,9 +3,9 @@
     <nuxt />
     <footer class="footer">
       <div
-        class="container flex justify-between items-start text-left text-white py-4 lg:py-6 gap-6"
+        class="container flex justify-between items-start text-left text-white py-4 lg:py-6 gap-6 text-xs md:text-base"
       >
-        <div class="flex-1">
+        <div class="w-40 md:w-48 lg:w-64 flex-shrink">
           <h2>About</h2>
           <p>
             Mattias Ahlsén is a 25-year old frontend-engineer passionate about
@@ -13,7 +13,7 @@
           </p>
         </div>
 
-        <div class="flex-1">
+        <div class="w-40 md:w-48 lg:w-64 flex-shrink">
           <h2>Credits</h2>
           <p>Created by Mattias Ahlsén.</p>
           <p>Background photo by Clément H on Unsplash.</p>
@@ -25,7 +25,7 @@
           </p>
         </div>
 
-        <div class="flex-1 flex justify-end">
+        <div class="w-40 md:w-48 lg:w-64 flex justify-end flex-shrink">
           <div>
             <h2>Contact</h2>
             <div class="icon github">
