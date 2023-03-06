@@ -1,7 +1,13 @@
 <template>
   <div class="project-container">
-    <div class="border">
-      <div>
+    <div class="border border-white">
+      <div class="relative">
+        <h2
+          v-if="featured"
+          class="featured absolute z-20 text-3xl font-bold hidden lg:block"
+        >
+          Featured
+        </h2>
         <div class="aspect-ratio">
           <div
             class="image-container"
@@ -17,16 +23,21 @@
                 loop
                 muted
               >
-                <source :src="require('../assets/' + video)" type="video/mp4">
+                <source :src="require('../assets/' + video)" type="video/mp4" />
               </video>
               <div
                 v-else
                 class="project-image"
                 :class="{ zoom: hover }"
-                :style="{ backgroundImage: `url('${require('../assets/' + backgroundImage)}')` }"
+                :style="{
+                  backgroundImage: `url('${require('../assets/' +
+                    backgroundImage)}')`
+                }"
               />
               <div class="on-hover center-flex">
-                <h2 :class="{ showLink: hover }" class="link-text">Go to website</h2>
+                <h2 :class="{ showLink: hover }" class="link-text">
+                  Go to website
+                </h2>
                 <div :class="{ darken: hover }" />
               </div>
             </a>
@@ -51,43 +62,51 @@
 
 <script>
 export default {
-  props: ['backgroundImage', 'video', 'link', 'github', 'description', 'title'],
+  props: [
+    "backgroundImage",
+    "video",
+    "link",
+    "github",
+    "description",
+    "title",
+    "featured"
+  ],
   data() {
     return {
-      hover: false,
-    }
+      hover: false
+    };
   },
   mounted() {
     if (this.video) {
-      this.$refs.video.defaultPlaybackRate = 2.0
-      this.$refs.video.load()
+      this.$refs.video.defaultPlaybackRate = 2.0;
+      this.$refs.video.load();
     }
   },
   methods: {
     mouseEnter() {
-      this.hover = true
+      this.hover = true;
       if (this.video) {
-        this.$refs.video.play()
+        this.$refs.video.play();
       }
     },
     mouseLeave() {
-      this.hover = false
+      this.hover = false;
       if (this.video) {
-        this.$refs.video.pause()
-        this.$refs.video.currentTime = 0
+        this.$refs.video.pause();
+        this.$refs.video.currentTime = 0;
       }
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
 @import "../styles/imports.scss";
 
 .project-container {
-  -webkit-box-shadow: 10px 9px 10px -7px rgba(82,78,82,1);
-  -moz-box-shadow: 10px 9px 10px -7px rgba(82,78,82,1);
-  box-shadow: 10px 9px 10px -7px rgba(82,78,82,1);
+  -webkit-box-shadow: 10px 9px 10px -7px rgba(82, 78, 82, 1);
+  -moz-box-shadow: 10px 9px 10px -7px rgba(82, 78, 82, 1);
+  box-shadow: 10px 9px 10px -7px rgba(82, 78, 82, 1);
   background-color: $light-2;
 }
 .aspect-ratio {
@@ -107,13 +126,14 @@ export default {
   width: 100%;
   height: 100%;
   background-size: cover;
-  background-position: center;
+  background-position: top;
   transition-duration: 0.2s;
 }
 .project-video {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top;
 }
 .zoom {
   transform: scale(1.1);
@@ -147,13 +167,6 @@ export default {
   background-color: black;
   opacity: 0.5;
 }
-.border {
-  border-top-right-radius: 0.2em;
-  border-top-left-radius: 0.2em;
-  background-color: $secondary;
-  padding: 1em;
-  border: none;
-}
 
 .project-links {
   margin: 2em;
@@ -163,5 +176,13 @@ export default {
 
 .title {
   color: $dark-2;
+}
+
+.featured {
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+  transform: rotate(-30deg);
+  left: -4rem;
+  top: -1rem;
+  color: darken($link-color, 0);
 }
 </style>

@@ -29,6 +29,7 @@
             description="A web application giving feedback on your CV. Uses OpenAI API."
             title="Badwriter.io"
             video="badwriter-demo.mp4"
+            :featured="true"
           />
         </div>
         <div class="content">
@@ -193,7 +194,7 @@ export default {
   justify-content: space-around;
 }
 .background {
-  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0.8)),
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
     url("../assets/background.jpg");
   background-position: center;
   background-size: cover;
